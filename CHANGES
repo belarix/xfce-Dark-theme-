@@ -1,3 +1,7 @@
+v1.71
+~~~~~
+1) Fixed XPM issue with close_active button in Normal Xfwm4 themes.
+
 v1.70
 ~~~~~
 1) Fixed issue with certain borders in Numidium theme.
