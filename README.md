@@ -212,6 +212,7 @@ Additional Screenshots
 ----------------------
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/2-numidium.png)
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/3-jetpurple.png)
+![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/7-jetblue.png)
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/4-classic.png)
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/5-millennium.png)
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/6-98lite_ouroboros.png)
