@@ -2,7 +2,7 @@ Redmond97 SE
 
 Windows 95 (Detroit) UI for Xfce4 4.20
 
-v1.71 / 2025 Sliver X
+v1.72 / 2025 Sliver X
 
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/1-ouroboros.png)
 

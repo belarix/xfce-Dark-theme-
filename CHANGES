@@ -1,3 +1,10 @@
+v1.72
+~~~~~
+1) Themed GTK calendars (Like the Clock applet's) to match rest of theme.
+2) Themed DateTime plugin to match Clock's appearance to allow as an alternative for right side of systray.
+3) Fixed stray pixel in close_inactive XPM file for Normal Xfwm4 themes.
+4) Move various functions into different CSS files for logical consistency/future troubleshooting.
+
 v1.71
 ~~~~~
 1) Fixed XPM issue with close_active button in Normal Xfwm4 themes.

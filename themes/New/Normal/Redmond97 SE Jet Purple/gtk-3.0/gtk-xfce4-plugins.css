@@ -3,68 +3,49 @@
 /* -------------------------------------- */ 
 
 
-/* -----------------General Plugin To TaskBar Appearance--------------------- */ 
+
+/*----------------------*/
+/* Various Plugin Blend */
+/*----------------------*/
 .xfce4-panel {
-   margin-top: 0px;
-   margin-left: -1px;
-   margin-right: -1px;
-   margin-bottom: 0px;
-   padding-top: 0px;
-   padding-left: 0px;
-   border-top: 1px solid @light_shadow;
-   border-right: none;
-   padding-bottom: 0px;
+    margin-top: 0px;
+    margin-left: -1px;
+    margin-right: -1px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+    border-top: 1px solid @light_shadow;
+    border-right: none;
+    padding-bottom: 0px;
 }
 
-/* --------------Unpressed Button Effect-------------- */ 
-#docklike-plugin .group, #showdesktop-button:hover {
-margin-top: 1px;
-   border-radius: 0px;
-   border-top: 1px solid @button_bg_color;
-   border-left: 1px solid @button_bg_color;
-   border-right: 1px solid @borders;
-   border-bottom: 1px solid @borders;
-   border-radius: 0px;
-   background-color: @button_bg_color;
-   box-shadow: inset -1px 0 @dark_shadow, inset 0 -1px @dark_shadow, inset 1px 0 @light_shadow, inset 0 1px @light_shadow;
-   outline-offset: -4px;
 
-}
-
-/* --------------Depressed Button Effect-------------- */ 
-#docklike-plugin .active_group, #showdesktop-button button:checked {
-margin-top: 1px;
-   border-radius: 0px;
-   border-top: 1px solid @borders;
-   border-left: 1px solid @borders;
-   border-bottom: 1px solid @light_shadow;
-   border-right: 1px solid @light_shadow;
-   box-shadow: 1px 1px @dark_shadow inset, -1px -1px @button_bg_color inset;
-   background-image: url("assets/scrollbar_trough.png");
-   color: @toolbar_fg_color;
-   background-color: @button_bg_color;
-}
-
-/* xfce4-docklike-plugin pseudo-handle */
+/*-----------------*/
+/* Docklike Plugin */
+/*-----------------*/
 #docklike-plugin {
-   border-left: 11px solid;
-   border-image: url("assets/handle.png");
-   border-image-slice: 4 4 3 11;
+    border-left: 11px solid;
+    border-image: url("assets/handle.png");
+    border-image-slice: 4 4 3 11;
 }
 
+
+
+/*--------------------*/
 /* Pulse Audio Plugin */
+/*--------------------*/
 #pulseaudio-button {
-   box-shadow: 1px 3px @dark_shadow inset, 0 2px @bg_color inset, 0 -1px @light_shadow inset;
-   margin-top: 0px;
-   padding-top: 0;
-   margin-left: -2px;
-   margin-right: -2px;
-   padding-left: 0px;
-   border-top: 1px solid @light_shadow;
-   border-right: none;
-   padding-bottom: 0px;
-   margin-bottom: 1px;
-   background-color: @bg_color;
+    box-shadow: 1px 3px @dark_shadow inset, 0 2px @bg_color inset, 0 -1px @light_shadow inset;
+    margin-top: 0px;
+    padding-top: 0;
+    margin-left: -2px;
+    margin-right: -2px;
+    padding-left: 0px;
+    border-top: 1px solid @light_shadow;
+    border-right: none;
+    padding-bottom: 0px;
+    margin-bottom: 1px;
+    background-color: @bg_color;
 }
 
 #pulseaudio-button image {
@@ -72,7 +53,10 @@ margin-top: 1px;
     margin-top: 2px;
 }
 
+
+/*---------------------*/
 /* Show Desktop Plugin */
+/*---------------------*/
 #showdesktop-button image {
     -gtk-icon-transform: scale(0);
     background-image:url('assets/arrow_down.png');
@@ -89,3 +73,41 @@ margin-top: 1px;
     background-position:50% 50%;
     background-repeat:no-repeat;
 }
+
+
+/*-----------------*/
+/* DateTime Plugin */
+/*-----------------*/
+
+/* Make DateTime plugin look like Clock (i.e., right side of System Tray) */
+#datetime-1 button, #datetime-2 button, #datetime-3 button, #datetime-4 button, #datetime-5 button, #datetime-6 button, #datetime-7 button,
+#datetime-8 button, #datetime-9 button, #datetime-10 button, #datetime-11 button, #datetime-12 button, #datetime-13 button, #datetime-14 > button,
+#datetime-15 button, #datetime-16 button, #datetime-17 button, #datetime-18 button, #datetime-19 button, #datetime-20 button, #datetime-21 button, #datetime-1 button:checked, #datetime-2 button:checked, #datetime-3 button:checked, #datetime-4 button:checked, #datetime-5 button:checked, #datetime-6 button:checked, #datetime-7 button:checked,
+#datetime-8 button:checked, #datetime-9 button:checked, #datetime-10 button:checked, #datetime-11 button:checked, #datetime-12 button:checked, #datetime-13 button:checked, #datetime-14 > button:checked,
+#datetime-15 button:checked, #datetime-16 button:checked, #datetime-17 button:checked, #datetime-18 button:checked, #datetime-19 button:checked, #datetime-20 button:checked, #datetime-21 >button:checked, #datetime-1 button:hover, #datetime-2 button:hover, #datetime-3 button:hover, #datetime-4 button:hover, #datetime-5 button:hover, #datetime-6 button:hover, #datetime-7 button:hover,
+#datetime-8 button:hover, #datetime-9 button:hover, #datetime-10 button:hover, #datetime-11 button:hover, #datetime-12 button:hover, #datetime-13 button:hover, #datetime-14 > button:hover,
+#datetime-15 button:hover, #datetime-16 button:hover, #datetime-17 button:hover, #datetime-18 button:hover, #datetime-19 button:hover, #datetime-20 button:hover, #datetime-21 > button:hover {
+    margin-left: -2px;
+    padding-right: 3px;
+    margin-right: 2px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    box-shadow: none;
+    border-top: 1px solid @dark_shadow;
+    border-right: 1px solid @light_shadow;
+    background-image: none;
+    font-weight: normal;
+    border-bottom: 1px solid @light_shadow;
+}
+
+#datetime-1 button label, #datetime-2 button label, #datetime-3 button label, #datetime-4 button label, #datetime-5 button label, #datetime-6 button label, #datetime-7 button label,
+#datetime-8 button label, #datetime-9 button label, #datetime-10 button label, #datetime-11 button label, #datetime-12 button label, #datetime-13 button label, #datetime-14 > button label,
+#datetime-15 button label, #datetime-16 button label, #datetime-17 button label, #datetime-18 button label, #datetime-19 button label, #datetime-20 button label, #datetime-21 button label, #datetime-1 button label:checked, #datetime-2 button label:checked, #datetime-3 button label:checked, #datetime-4 button label:checked, #datetime-5 button label:checked, #datetime-6 button label:checked, #datetime-7 button label:checked,
+#datetime-8 button label:checked, #datetime-9 button label:checked, #datetime-10 button label:checked, #datetime-11 button label:checked, #datetime-12 button label:checked, #datetime-13 button label:checked, #datetime-14 > button label:checked,
+#datetime-15 button label:checked, #datetime-16 button label:checked, #datetime-17 button label:checked, #datetime-18 button label:checked, #datetime-19 button label:checked, #datetime-20 button label:checked, #datetime-21 >button label:checked, #datetime-1 button label:hover, #datetime-2 button label:hover, #datetime-3 button label:hover, #datetime-4 button label:hover, #datetime-5 button label:hover, #datetime-6 button label:hover, #datetime-7 button label:hover,
+#datetime-8 button label:hover, #datetime-9 button label:hover, #datetime-10 button label:hover, #datetime-11 button label:hover, #datetime-12 button label:hover, #datetime-13 button label:hover, #datetime-14 > button label:hover,
+#datetime-15 button label:hover, #datetime-16 button label:hover, #datetime-17 button label:hover, #datetime-18 button label:hover, #datetime-19 button label:hover, #datetime-20 button label:hover, #datetime-21 > button label:hover {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+

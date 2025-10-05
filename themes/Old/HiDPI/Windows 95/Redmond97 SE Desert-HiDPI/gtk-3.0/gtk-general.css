@@ -90,27 +90,49 @@ undershoot.top, undershoot.right, undershoot.bottom, undershoot.left { backgroun
 
 
 calendar {
+   color: @theme_fg_color;
+   background-color: @theme_bg_color;
    padding: 2px;
    border-width: 1px;
    border-radius: 0px;
    border-style: solid;
    border-color: @borders;
-   color: @text_color; }
- 
+}
+
 calendar.header {
-   border: none;
-   color: @theme_selected_bg_color; }
+   border: 2px solid @button_bg_color;
+	background: @wm_active_title;
+	color: @wm_active_title_text;
+}
+
+/* Give it a border like a menu or window! */
+calendar.view {
+  background-color: @bg_color;
+      background: @button_bg_color;
+  color: @button_fg_color;
+  padding: 3px;
+  border: 1px solid @bg_color; 
+  border-right: 1px solid @borders;
+  border-bottom: 1px solid @borders;
+  box-shadow: 1px 1px @light_shadow inset, -1px -1px @dark_shadow inset;
+  border-radius: 0;
+}
   
 calendar:selected {
-   border-radius: 0;
-   color: @theme_selected_fg_color;
-   background-color: @theme_selected_bg_color; }
+    border-radius: 0;
+    color: @theme_selected_fg_color;
+    background-color: @theme_selected_bg_color;
+}
   
 calendar:indeterminate {
-   color: alpha(currentColor, 0.55); }
-  
+    color: alpha(currentColor, 0.55);
+}
+
 calendar.highlight {
-   color: @theme_selected_bg_color; }
+	background-color: @button_bg_color;
+    color: @button_fg_color;
+    border-radius: 1px solid;
+}
 
 
 /* Scrolled window padding and colors. Don't reference directly otherwise the
