@@ -1,9 +1,12 @@
-v1.72
+v1.74
 ~~~~~
-1) Themed GTK calendars (Like the Clock applet's) to match rest of theme.
+1) Themed GTK calendars (Like the Clock and Date/Time applets) to match 9x aesthetic.
 2) Themed DateTime plugin to match Clock's appearance to allow as an alternative for right side of systray.
 3) Fixed stray pixel in close_inactive XPM file for Normal Xfwm4 themes.
-4) Move various functions into different CSS files for logical consistency/future troubleshooting.
+4) Deskbar panel support for most plugins within limitations of Xfce4-Panel's inline CSS, to the slight detriment of Vertical panels.
+5) Removed border hack: Panel size should be set to 1 in any given Xfce Panel's settings.
+6) Numerous small adjustments to alignment and spacing for Xfce4 panel items.
+
 
 v1.71
 ~~~~~

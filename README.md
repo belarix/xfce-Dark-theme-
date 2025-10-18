@@ -2,7 +2,7 @@ Redmond97 SE
 
 Windows 95 (Detroit) UI for Xfce4 4.20
 
-v1.72 / 2025 Sliver X
+v1.74 / 2025 Sliver X
 
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/1-ouroboros.png)
 
@@ -69,6 +69,9 @@ Taskbar: A replica of the Explorer System Tray can be made by putting the Tray a
 
          Included are profiles for the excellent xfce4-panel-profiles addon that replicate a Win9x or Win7 style taskbar: They should be placed in
          either /.local/share/xfce4-panel-profiles/ or /usr/local/share/xfce4-panel-profiles/layouts/ to show up in its Backup/Restore menu.
+
+
+         If not using a profile, border size needs set to at least 1px in the panel's settings for things to look right.
 
 Etc: The CSD has a standard Windows button order defined in GTK3/4's settings.ini but Xfce4's xfsettingsd overrides this. 
      A workaround would be to execute this somwhere at logon: 
@@ -174,6 +177,11 @@ Wine applications' text will be too small at 4K, and if its DPI is manually incr
 that amount, not just text.. It appears to be a conflict with using GDK_SCALE/Xfce4's Windows Scale 2x function.
 
 
+[Xfce]
+
+Due to limitations with themeing Xfce's panels, vertical panels don't look nearly as good as they should.
+
+
 Credits
 -------
 Sliver X | Redmond 97 SE
@@ -212,7 +220,7 @@ Additional Screenshots
 ----------------------
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/2-numidium.png)
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/3-jetpurple.png)
-![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/7-jetblue.png)
+![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/7-duskblue.png)
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/4-classic.png)
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/5-millennium.png)
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/6-98lite_ouroboros.png)
