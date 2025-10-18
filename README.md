@@ -73,10 +73,14 @@ Taskbar: A replica of the Explorer System Tray can be made by putting the Tray a
 
          If not using a profile, border size needs set to at least 1px in the panel's settings for things to look right.
 
-Etc: The CSD has a standard Windows button order defined in GTK3/4's settings.ini but Xfce4's xfsettingsd overrides this. 
-     A workaround would be to execute this somwhere at logon: 
+Etc: 
+    1) The CSD has a standard Windows button order defined in GTK3/4's settings.ini but Xfce4's xfsettingsd overrides this. 
+       A workaround would be to execute this somwhere at logon: 
 
 	gsettings set org.gnome.desktop.wm.preferences button-layout menu:minimize,maximize,close
+
+    2) If you're running nm-applet, it won't center correctly on a Deskbar system tray. You can edit /etc/xdg/autostart/nm-applet.desktop
+       to exec nm-applet --indicator to fix this.
 
 
 [HiDPI Themes]
