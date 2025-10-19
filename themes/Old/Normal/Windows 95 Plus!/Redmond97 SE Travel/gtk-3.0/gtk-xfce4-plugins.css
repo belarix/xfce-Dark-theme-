@@ -11,7 +11,7 @@
 #docklike-plugin.horizontal {
     border-left: 11px solid;
     border-image: url("assets/handle.png");
-    border-image-slice: 4 4 3 11;
+    border-image-slice: 8 8 6 22;
 }
 
 /* --------------Unpressed Button Effect -------------- */ 
@@ -30,7 +30,9 @@ margin-top: 1px;
 
 /* --------------Depressed Button Effect -------------- */ 
 #docklike-plugin .active_group {
-margin-top: 1px;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
     border-radius: 0px;
     border-top: 1px solid @borders;
     border-left: 1px solid @borders;
@@ -43,9 +45,10 @@ margin-top: 1px;
 }
 
 #docklike-plugin.vertical .group {
-margin-left: 1px;
-margin-right: 1px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
+
 
 /*--------------------*/
 /* Pulse Audio Plugin */
@@ -67,20 +70,20 @@ margin-right: 1px;
 }
 
 #pulseaudio-button .horizontal > image {
-margin-top: 4px;
+    margin-top: 4px;
 }
 
 /* Fix an artifact on hover... */
 #pulseaudio-button:hover  {
-margin-bottom: 1px;
-border-bottom: 1px solid @bg_color;
+    margin-bottom: 1px;
+    border-bottom: 1px solid @bg_color;
 }
 
 /* Fix an artifact on hover... */
 #pulseaudio-button:checked {
-margin-bottom: 1px;
-border-top: 1px solid @bg_color;
-border-bottom: 1px solid @bg_color;
+    margin-bottom: 1px;
+    border-top: 1px solid @bg_color;
+    border-bottom: 1px solid @bg_color;
 }
 
 
@@ -91,9 +94,9 @@ border-bottom: 1px solid @bg_color;
 
 /* Fix an artifact on hover... */
 #pulseaudio-button:checked .vertical > image {
-margin-bottom: 1px;
-border-top: 1px solid @bg_color;
-border-bottom: 1px solid @bg_color;
+    margin-bottom: 1px;
+    border-top: 1px solid @bg_color;
+    border-bottom: 1px solid @bg_color;
 }
 
 
@@ -110,17 +113,7 @@ border-bottom: 1px solid @bg_color;
     background-repeat:no-repeat;
 }
 
-/* Flat hover effect */
-#showdesktop-button:hover {
-   color: @toolbar_fg_color;
-   border-color: @button_bg_color;
-   background-color: @button_bg_color;
-   box-shadow: inset -1px -1px @dark_shadow, inset 1px 1px @light_shadow; }
-
-
 #showdesktop-button:checked image, #showdesktop-button:active image {
-    margin-left: -1px;
-    margin-top: -2px;
     -gtk-icon-transform: scale(0);
     background-image:url('assets/arrow_up.png');
     background-size:17px;
@@ -128,9 +121,27 @@ border-bottom: 1px solid @bg_color;
     background-repeat:no-repeat;
 }
 
-#XfcePanelWindow.deskbar #showdesktop-button {
-margin: 1px;
+
+/* Flat hover effect */
+#showdesktop-button:hover {
+    margin: 2px;
+ }
+
+
+/* Checked effect */
+#showdesktop-button:checked {
+   margin: 2px;
+    border-radius: 0px;
+    border-top: 1px solid @borders;
+    border-left: 1px solid @borders;
+    border-bottom: 1px solid @light_shadow;
+    border-right: 1px solid @light_shadow;
+    box-shadow: 1px 1px @dark_shadow inset, -1px -1px @button_bg_color inset;
+    background-image: url("assets/scrollbar_trough.png");
+    color: @toolbar_fg_color;
+    background-color: @button_bg_color;
 }
+
 
 
 /*-----------------*/

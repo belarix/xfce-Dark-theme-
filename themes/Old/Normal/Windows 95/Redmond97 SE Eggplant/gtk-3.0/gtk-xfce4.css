@@ -22,7 +22,7 @@
    box-shadow: 0 1px @light_shadow;
    margin-top: 3px; }
 
-#XfcePanelWindow .horizontal button:active, #XfcePanelWindow .horizontal button:checked, #XfcePanelWindow.deskbar button:checked, #XfcePanelWindow.deskbar button:active {
+#XfcePanelWindow .horizontal button:active, #XfcePanelWindow .horizontal button:checked {
    font-weight: bold;
    margin-top: 2px;
    margin-bottom: 2px;
@@ -38,17 +38,26 @@
    color: @toolbar_fg_color;
    background-color: @button_bg_color; }
 
+#XfcePanelWindow.deskbar button:active, #XfcePanelWindow.deskbar button:checked, #XfcePanelWindow #launcher-arrow:active, #XfcePanelWindow #launcher-arrow:checked {
+   font-weight: bold;
+   margin: 2px;
+   border: none;
+   box-shadow: none;
+   border-top: 1px solid @borders;
+   border-left: 1px solid @borders;
+   border-bottom: 1px solid @light_shadow;
+   border-right: 1px solid @light_shadow;
+   box-shadow: 1px 1px @dark_shadow inset, -1px -1px @button_bg_color inset;
+   background-image: url("assets/scrollbar_trough.png");
+   color: @toolbar_fg_color;
+   background-color: @button_bg_color; }
+
+
 #XfcePanelWindow #launcher-arrow, 
 #XfcePanelWindow #launcher-arrow:hover {
    border-radius: 0;
-   margin: 0;
-   margin-top: 1px;
+   margin: 2px;
    padding: 3px; }
-
-#XfcePanelWindow #launcher-arrow:active {
-   box-shadow: 1px 1px @dark_shadow inset, -1px -1px @light_shadow inset;
-   background-image: none;
-   border: transparent solid; }
 
 #XfcePanelWindow {
    box-shadow: 0 1px @light_shadow inset;
@@ -116,7 +125,6 @@
 #applicationmenu-button:checked {
    border: none;
    box-shadow: none;
-   margin-right: 1px;
    border-top: 1px solid @borders;
    border-left: 1px solid @borders;
    border-bottom: 1px solid @light_shadow;
@@ -126,6 +134,11 @@
    background-image: url("assets/scrollbar_trough.png");
    color: @toolbar_fg_color;
    background-color: @button_bg_color; }
+
+#applicationmenu-button:checked image, #applicationmenu-button:checked label {
+margin-left: 1px;
+margin-right: -1px;
+}
 
 #applicationmenu-button box {
    padding: 3px; }
@@ -337,4 +350,5 @@ margin-top: 1px;
     background-color: @bg_color;
     background-image: url("assets/scrollbar_trough.png");
 }
+
 

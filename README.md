@@ -1,8 +1,8 @@
 Redmond97 SE
 
-Windows 95 (Detroit) UI for Xfce4 4.20
+Windows 95 OSR2 UI for Xfce4 4.20
 
-v1.74 / 2025 Sliver X
+v1.75 / 2025 Sliver X
 
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/1-ouroboros.png)
 
@@ -64,14 +64,14 @@ Qt6: qt6ct and qt6gtk2 need installed and GTK set under qt6ct. The QT_QPA_PLATFO
 
 
 Taskbar: A replica of the Explorer System Tray can be made by putting the Tray and Clock applets (in that order) together on the taskbar.
-         The pulseaudio-button plugin is also themed to fit between these visually. Panel icons should be set to a fixed "16x16" size to keep them
-         consistent across things.
+       The pulseaudio-button plugin is also themed to fit between these visually. Panel icons should be set to a fixed "16x16" size to keep them
+       consistent across things.
 
-         Included are profiles for the excellent xfce4-panel-profiles addon that replicate a Win9x or Win7 style taskbar: They should be placed in
-         either /.local/share/xfce4-panel-profiles/ or /usr/local/share/xfce4-panel-profiles/layouts/ to show up in its Backup/Restore menu.
+       Included are profiles for the excellent xfce4-panel-profiles addon that replicate a Win9x or Win7 style taskbar: They should be placed in
+       either /.local/share/xfce4-panel-profiles/ or /usr/local/share/xfce4-panel-profiles/layouts/ to show up in its Backup/Restore menu.
 
 
-         If not using a profile, border size needs set to at least 1px in the panel's settings for things to look right.
+       If not using a profile, border size needs set to at least 1px in the panel's settings for things to look right.
 
 Etc: 
     1) The CSD has a standard Windows button order defined in GTK3/4's settings.ini but Xfce4's xfsettingsd overrides this. 

@@ -1,3 +1,10 @@
+v1.75
+~~~~~
+1) Theme polishing for ShowDesktopButton, WhiskerMenuButton, ApplicationMenuButton.
+2) Button consistency fixes for Deskbar between WhiskerMenu/ApplicationMenu/Launchers/Window Buttons/Docklike Taskbar/Etc
+3) Code cleanups.
+
+
 v1.74
 ~~~~~
 1) Themed GTK calendars (Like the Clock and Date/Time applets) to match 9x aesthetic.
