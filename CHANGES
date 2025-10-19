@@ -1,3 +1,10 @@
+v1.76
+~~~~~
+1) Adjustments to Deskbar button dimensions and System Tray/Icons.
+2) Xfwm4 themes now preserve window borders on maximize.
+3) Fixed icon jitter on Deskbar PulseAudioButton. This still needs work...
+
+
 v1.75
 ~~~~~
 1) Theme polishing for ShowDesktopButton, WhiskerMenuButton, ApplicationMenuButton.

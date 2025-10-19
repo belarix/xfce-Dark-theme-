@@ -11,7 +11,7 @@
 
 #whiskermenu-button {
   font-weight: bold;
-  margin: 2px;
+  margin: 1px;
   color: @theme_fg_color;
   border-top: 1px solid @button_bg_color;
   border-left: 1px solid @button_bg_color;
