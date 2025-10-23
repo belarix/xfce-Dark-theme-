@@ -1,3 +1,9 @@
+v1.78
+~~~~~
+1) All buttons should behave and look consistent across panels and most plugins.
+2) Most default Xfce plugins are now themed in some way: Mount and Keyboard plugin are only partially supported.
+3) General polish of overall theme. This is hopefully a milestone in development.
+
 v1.76
 ~~~~~
 1) Adjustments to Deskbar button dimensions and System Tray/Icons.

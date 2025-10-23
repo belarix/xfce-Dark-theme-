@@ -3,6 +3,102 @@
 /* -------------------------------------- */ 
 
 
+/*--------------------------------------*/
+/* Actions Button - Give it some space !*/
+/*--------------------------------------*/
+
+#actions-button label {
+padding-left: 5px;
+padding-right: 5px;
+}
+
+
+/*------------------*/
+/* Application Menu */
+/*------------------*/
+
+#applicationmenu-button {
+   font-weight: bold;
+   padding: 4px;
+   margin-left: 4px;
+   margin-top: 2px;
+   margin-bottom: 2px;
+   color: @theme_fg_color;
+   border-top: 1px solid @button_bg_color;
+   border-left: 1px solid @button_bg_color;
+   border-right: 1px solid @borders;
+   border-bottom: 1px solid @borders; 
+   border-radius: 0px;
+   background-color: @button_bg_color;
+   box-shadow: inset -1px 0 @dark_shadow, inset 0 -1px @dark_shadow, inset 1px 0 @light_shadow, inset 0 1px @light_shadow,
+   0 -1px @light_shadow, 0 -1px @bg_color; }
+
+#applicationmenu-button:checked {
+   border: none;
+   box-shadow: none;
+   border-top: 1px solid @borders;
+   border-left: 1px solid @borders;
+   border-bottom: 1px solid @light_shadow;
+   border-right: 1px solid @light_shadow;
+   box-shadow: 1px 1px @dark_shadow inset, -1px -1px @button_bg_color inset,
+   0 -1px @light_shadow, 0 -1px @bg_color;
+   background-image: url("assets/scrollbar_trough.png");
+   color: @toolbar_fg_color;
+   background-color: @button_bg_color; }
+
+#applicationmenu-button:checked image, #applicationmenu-button:checked label {
+margin-left: 1px;
+margin-right: -1px;
+}
+
+#applicationmenu-button box {
+   padding: 3px; }
+
+
+/*--------------*/
+/* Clock Plugin */
+/*--------------*/
+
+#XfcePanelWindow.deskbar #clock-button,
+#XfcePanelWindow.deskbar #clock-button:hover,
+#XfcePanelWindow.deskbar #clock-button:checked {
+    margin: 2px;
+    padding-right: 2px;
+    padding-left: 2px;
+    box-shadow: none;
+    border-top: 1px solid @dark_shadow;
+    border-right: 1px solid @light_shadow;
+    border-left: 1px solid @dark_shadow;
+    border-bottom: 1px solid @light_shadow;
+    background-image: none;
+    font-weight: normal;
+}
+
+#XfcePanelWindow.deskbar #clock-button label {
+  margin: -1px;
+}
+
+#XfcePanelWindow #clock-button,
+#XfcePanelWindow #clock-button:hover,
+#XfcePanelWindow #clock-button:checked {
+   margin-left: -2px;
+   padding-right: 3px;
+   margin-top: 3px;
+   margin-bottom: 2px;
+   box-shadow: none;
+   border-top: 1px solid @dark_shadow;
+   border-right: 1px solid @light_shadow;
+   background-image: none;
+   font-weight: normal;
+   border-bottom: 1px solid @light_shadow; }
+
+#XfcePanelWindow #clock-button label {
+  margin-right: 4px;
+  margin-left: 2px;
+  margin-top: -1px;
+}
+
+
 /*-----------------*/
 /* Docklike Plugin */
 /*-----------------*/
@@ -15,8 +111,8 @@
 }
 
 /* --------------Unpressed Button Effect -------------- */ 
-#docklike-plugin .group {
-margin-top: 1px;
+#docklike-plugin.horizontal .group, #docklike-plugin.vertical .group {
+    margin-top: 1px;
     border-radius: 0px;
     border-top: 1px solid @button_bg_color;
     border-left: 1px solid @button_bg_color;
@@ -29,10 +125,7 @@ margin-top: 1px;
 }
 
 /* --------------Depressed Button Effect -------------- */ 
-#docklike-plugin .active_group {
-    margin-top: 1px;
-    margin-left: 1px;
-    margin-right: 1px;
+#docklike-plugin.horizontal .active_group, #docklike-plugin.vertical .active_group {
     border-radius: 0px;
     border-top: 1px solid @borders;
     border-left: 1px solid @borders;
@@ -44,9 +137,19 @@ margin-top: 1px;
     background-color: @button_bg_color;
 }
 
+#docklike-plugin.horizontal .group {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 #docklike-plugin.vertical .group {
     margin-left: 1px;
     margin-right: 1px;
+}
+
+#docklike-plugin.horizontal .active_group image, #docklike-plugin.vertical .active_group image {
+    margin-left: 1px;
+    margin-right: -1px;
 }
 
 
@@ -88,7 +191,6 @@ margin-top: 1px;
     background-image: none;
     background-color: transparent;
 }
-
 
 #pulseaudio-button .vertical > image {
     -gtk-icon-transform: scale(0.5);
@@ -144,13 +246,31 @@ margin-top: 1px;
 /*-----------------*/
 
 /* Make DateTime plugin look like Clock (i.e., right side of System Tray) */
-#datetime-1 button, #datetime-2 button, #datetime-3 button, #datetime-4 button, #datetime-5 button, #datetime-6 button, #datetime-7 button,
-#datetime-8 button, #datetime-9 button, #datetime-10 button, #datetime-11 button, #datetime-12 button, #datetime-13 button, #datetime-14 > button,
-#datetime-15 button, #datetime-16 button, #datetime-17 button, #datetime-18 button, #datetime-19 button, #datetime-20 button, #datetime-21 button, #datetime-1 button:checked, #datetime-2 button:checked, #datetime-3 button:checked, #datetime-4 button:checked, #datetime-5 button:checked, #datetime-6 button:checked, #datetime-7 button:checked,
-#datetime-8 button:checked, #datetime-9 button:checked, #datetime-10 button:checked, #datetime-11 button:checked, #datetime-12 button:checked, #datetime-13 button:checked, #datetime-14 > button:checked,
-#datetime-15 button:checked, #datetime-16 button:checked, #datetime-17 button:checked, #datetime-18 button:checked, #datetime-19 button:checked, #datetime-20 button:checked, #datetime-21 >button:checked, #datetime-1 button:hover, #datetime-2 button:hover, #datetime-3 button:hover, #datetime-4 button:hover, #datetime-5 button:hover, #datetime-6 button:hover, #datetime-7 button:hover,
-#datetime-8 button:hover, #datetime-9 button:hover, #datetime-10 button:hover, #datetime-11 button:hover, #datetime-12 button:hover, #datetime-13 button:hover, #datetime-14 > button:hover,
-#datetime-15 button:hover, #datetime-16 button:hover, #datetime-17 button:hover, #datetime-18 button:hover, #datetime-19 button:hover, #datetime-20 button:hover, #datetime-21 > button:hover {
+#datetime-1 button, #datetime-2 button, #datetime-3 button, #datetime-4 button,
+#datetime-5 button, #datetime-6 button, #datetime-7 button, #datetime-8 button,
+#datetime-9 button, #datetime-10 button, #datetime-11 button, #datetime-12 button,
+#datetime-13 button, #datetime-14 button, #datetime-15 button, 
+#datetime-16 button, #datetime-17 button, #datetime-18 button, #datetime-19 button,
+#datetime-20 button, #datetime-21 button, #datetime-22 button, #datetime-23 button, 
+#datetime-24 button, #datetime-25 button, #datetime-26 button, #datetime-27 button, 
+#datetime-28 button, #datetime-29 button, #datetime-30 button, #datetime-31 button, 
+#datetime-32 button, #datetime-33 button, #datetime-34 button, #datetime-35 button, 
+#datetime-36 button, #datetime-37 button, #datetime-38 button, #datetime-39 button, 
+#datetime-40 button, #datetime-41 button, #datetime-42 button, #datetime-43 button,
+#datetime-44 button, #datetime-45 button, #datetime-46 button, #datetime-47 button, 
+#datetime-48 button, #datetime-49 button, #datetime-50 button, #datetime-51 button, 
+#datetime-52 button, #datetime-53 button, #datetime-54 button, #datetime-55 button, 
+#datetime-56 button, #datetime-57 button, #datetime-58 button, #datetime-59 button, 
+#datetime-60 button, #datetime-61 button, #datetime-62 button, #datetime-63 button, 
+#datetime-64 button, #datetime-65 button, #datetime-66 button, #datetime-67 button,
+#datetime-68 button, #datetime-69 button, #datetime-70 button, #datetime-71 button, 
+#datetime-72 button, #datetime-73 button, #datetime-74 button, #datetime-75 button, 
+#datetime-76 button, #datetime-77 button, #datetime-78 button, #datetime-79 button, 
+#datetime-80 button, #datetime-81 button, #datetime-82 button, #datetime-83 button, 
+#datetime-84 button, #datetime-85 button, #datetime-86 button, #datetime-87 button, 
+#datetime-88 button, #datetime-89 button, #datetime-90 button, #datetime-91 button,
+#datetime-92 button, #datetime-93 button, #datetime-94 button, #datetime-95 button, 
+#datetime-96 button, #datetime-97 button, #datetime-98 button, #datetime-99 button {
     margin-left: -2px;
     padding-right: 3px;
     margin-right: 2px;
@@ -164,19 +284,192 @@ margin-top: 1px;
     border-bottom: 1px solid @light_shadow;
 }
 
-#datetime-1 button label, #datetime-2 button label, #datetime-3 button label, #datetime-4 button label, #datetime-5 button label, #datetime-6 button label, #datetime-7 button label,
-#datetime-8 button label, #datetime-9 button label, #datetime-10 button label, #datetime-11 button label, #datetime-12 button label, #datetime-13 button label, #datetime-14 > button label,
-#datetime-15 button label, #datetime-16 button label, #datetime-17 button label, #datetime-18 button label, #datetime-19 button label, #datetime-20 button label, #datetime-21 button label, #datetime-1 button label:checked, #datetime-2 button label:checked, #datetime-3 button label:checked, #datetime-4 button label:checked, #datetime-5 button label:checked, #datetime-6 button label:checked, #datetime-7 button label:checked,
-#datetime-8 button label:checked, #datetime-9 button label:checked, #datetime-10 button label:checked, #datetime-11 button label:checked, #datetime-12 button label:checked, #datetime-13 button label:checked, #datetime-14 > button label:checked,
-#datetime-15 button label:checked, #datetime-16 button label:checked, #datetime-17 button label:checked, #datetime-18 button label:checked, #datetime-19 button label:checked, #datetime-20 button label:checked, #datetime-21 >button label:checked, #datetime-1 button label:hover, #datetime-2 button label:hover, #datetime-3 button label:hover, #datetime-4 button label:hover, #datetime-5 button label:hover, #datetime-6 button label:hover, #datetime-7 button label:hover,
-#datetime-8 button label:hover, #datetime-9 button label:hover, #datetime-10 button label:hover, #datetime-11 button label:hover, #datetime-12 button label:hover, #datetime-13 button label:hover, #datetime-14 > button label:hover,
-#datetime-15 button label:hover, #datetime-16 button label:hover, #datetime-17 button label:hover, #datetime-18 button label:hover, #datetime-19 button label:hover, #datetime-20 button label:hover, #datetime-21 > button label:hover {
+#datetime-1 button label, #datetime-2 button label, #datetime-3 button label, #datetime-4 button label,
+#datetime-5 button label, #datetime-6 button label, #datetime-7 button label, #datetime-8 button label,
+#datetime-9 button label, #datetime-10 button label, #datetime-11 button label, #datetime-12 button label,
+#datetime-13 button label, #datetime-14 button label, #datetime-15 button label, 
+#datetime-16 button label, #datetime-17 button label, #datetime-18 button label, #datetime-19 button label,
+#datetime-20 button label, #datetime-21 button label, #datetime-22 button label, #datetime-23 button label, 
+#datetime-24 button label, #datetime-25 button label, #datetime-26 button label, #datetime-27 button label, 
+#datetime-28 button label, #datetime-29 button label, #datetime-30 button label, #datetime-31 button label, 
+#datetime-32 button label, #datetime-33 button label, #datetime-34 button label, #datetime-35 button label, 
+#datetime-36 button label, #datetime-37 button label, #datetime-38 button label, #datetime-39 button label, 
+#datetime-40 button label, #datetime-41 button label, #datetime-42 button label, #datetime-43 button label,
+#datetime-44 button label, #datetime-45 button label, #datetime-46 button label, #datetime-47 button label, 
+#datetime-48 button label, #datetime-49 button label, #datetime-50 button label, #datetime-51 button label, 
+#datetime-52 button label, #datetime-53 button label, #datetime-54 button label, #datetime-55 button label, 
+#datetime-56 button label, #datetime-57 button label, #datetime-58 button label, #datetime-59 button label, 
+#datetime-60 button label, #datetime-61 button label, #datetime-62 button label, #datetime-63 button label, 
+#datetime-64 button label, #datetime-65 button label, #datetime-66 button label, #datetime-67 button label,
+#datetime-68 button label, #datetime-69 button label, #datetime-70 button label, #datetime-71 button label, 
+#datetime-72 button label, #datetime-73 button label, #datetime-74 button label, #datetime-75 button label, 
+#datetime-76 button label, #datetime-77 button label, #datetime-78 button label, #datetime-79 button label, 
+#datetime-80 button label, #datetime-81 button label, #datetime-82 button label, #datetime-83 button label, 
+#datetime-84 button label, #datetime-85 button label, #datetime-86 button label, #datetime-87 button label, 
+#datetime-88 button label, #datetime-89 button label, #datetime-90 button label, #datetime-91 button label,
+#datetime-92 button label, #datetime-93 button label, #datetime-94 button label, #datetime-95 button label, 
+#datetime-96 button label, #datetime-97 button label, #datetime-98 button label, #datetime-99 button label {
     padding-left: 2px;
     padding-right: 2px;
 }
 
 
+/*-----------------------------*/
+/* Generic Flatbutton Behavior */
+/*-----------------------------*/
+
+#xfce4-notification-plugin image, #xfce4-power-manager-plugin image, #actions-button image, #xfce-panel-button image,
+#directorymenu-button, #windowmenu-button {
+    padding: 3px;
+}
 
 
+/* --------------Depressed Button Effect -------------- */
+#xfce4-notification-plugin:checked, #xfce4-power-manager-plugin:checked, #actions-button:active, #actions-button:checked, #xfce-panel-button:active,
+#directorymenu-button:active, #directorymenu-button:checked, #windowmenu-button:active, #windowmenu-button:checked,
+#weather-1 button:active, #weather-2 button:active, #weather-3 button:active, #weather-4 button:active,
+#weather-5 button:active, #weather-6 button:active, #weather-7 button:active, #weather-8 button:active,
+#weather-9 button:active, #weather-10 button:active, #weather-11 button:active, #weather-12 button:active,
+#weather-13 button:active, #weather-14 button:active, #weather-15 button:active, 
+#weather-16 button:active, #weather-17 button:active, #weather-18 button:active, #weather-19 button:active,
+#weather-20 button:active, #weather-21 button:active, #weather-22 button:active, #weather-23 button:active, 
+#weather-24 button:active, #weather-25 button:active, #weather-26 button:active, #weather-27 button:active, 
+#weather-28 button:active, #weather-29 button:active, #weather-30 button:active, #weather-31 button:active, 
+#weather-32 button:active, #weather-33 button:active, #weather-34 button:active, #weather-35 button:active, 
+#weather-36 button:active, #weather-37 button:active, #weather-38 button:active, #weather-39 button:active, 
+#weather-40 button:active, #weather-41 button:active, #weather-42 button:active, #weather-43 button:active,
+#weather-44 button:active, #weather-45 button:active, #weather-46 button:active, #weather-47 button:active, 
+#weather-48 button:active, #weather-49 button:active, #weather-50 button:active, #weather-51 button:active, 
+#weather-52 button:active, #weather-53 button:active, #weather-54 button:active, #weather-55 button:active, 
+#weather-56 button:active, #weather-57 button:active, #weather-58 button:active, #weather-59 button:active, 
+#weather-60 button:active, #weather-61 button:active, #weather-62 button:active, #weather-63 button:active, 
+#weather-64 button:active, #weather-65 button:active, #weather-66 button:active, #weather-67 button:active,
+#weather-68 button:active, #weather-69 button:active, #weather-70 button:active, #weather-71 button:active, 
+#weather-72 button:active, #weather-73 button:active, #weather-74 button:active, #weather-75 button:active, 
+#weather-76 button:active, #weather-77 button:active, #weather-78 button:active, #weather-79 button:active, 
+#weather-80 button:active, #weather-81 button:active, #weather-82 button:active, #weather-83 button:active, 
+#weather-84 button:active, #weather-85 button:active, #weather-86 button:active, #weather-87 button:active, 
+#weather-88 button:active, #weather-89 button:active, #weather-90 button:active, #weather-91 button:active,
+#weather-92 button:active, #weather-93 button:active, #weather-94 button:active, #weather-95 button:active, 
+#weather-96 button:active, #weather-97 button:active, #weather-98 button:active, #weather-99 button:active,
+#weather-1 button:checked, #weather-2 button:checked, #weather-3 button:checked, #weather-4 button:checked,
+#weather-5 button:checked, #weather-6 button:checked, #weather-7 button:checked, #weather-8 button:checked,
+#weather-9 button:checked, #weather-10 button:checked, #weather-11 button:checked, #weather-12 button:checked,
+#weather-13 button:checked, #weather-14 button:checked, #weather-15 button:checked, 
+#weather-16 button:checked, #weather-17 button:checked, #weather-18 button:checked, #weather-19 button:checked,
+#weather-20 button:checked, #weather-21 button:checked, #weather-22 button:checked, #weather-23 button:checked, 
+#weather-24 button:checked, #weather-25 button:checked, #weather-26 button:checked, #weather-27 button:checked, 
+#weather-28 button:checked, #weather-29 button:checked, #weather-30 button:checked, #weather-31 button:checked, 
+#weather-32 button:checked, #weather-33 button:checked, #weather-34 button:checked, #weather-35 button:checked, 
+#weather-36 button:checked, #weather-37 button:checked, #weather-38 button:checked, #weather-39 button:checked, 
+#weather-40 button:checked, #weather-41 button:checked, #weather-42 button:checked, #weather-43 button:checked,
+#weather-44 button:checked, #weather-45 button:checked, #weather-46 button:checked, #weather-47 button:checked, 
+#weather-48 button:checked, #weather-49 button:checked, #weather-50 button:checked, #weather-51 button:checked, 
+#weather-52 button:checked, #weather-53 button:checked, #weather-54 button:checked, #weather-55 button:checked, 
+#weather-56 button:checked, #weather-57 button:checked, #weather-58 button:checked, #weather-59 button:checked, 
+#weather-60 button:checked, #weather-61 button:checked, #weather-62 button:checked, #weather-63 button:checked, 
+#weather-64 button:checked, #weather-65 button:checked, #weather-66 button:checked, #weather-67 button:checked,
+#weather-68 button:checked, #weather-69 button:checked, #weather-70 button:checked, #weather-71 button:checked, 
+#weather-72 button:checked, #weather-73 button:checked, #weather-74 button:checked, #weather-75 button:checked, 
+#weather-76 button:checked, #weather-77 button:checked, #weather-78 button:checked, #weather-79 button:checked, 
+#weather-80 button:checked, #weather-81 button:checked, #weather-82 button:checked, #weather-83 button:checked, 
+#weather-84 button:checked, #weather-85 button:checked, #weather-86 button:checked, #weather-87 button:checked, 
+#weather-88 button:checked, #weather-89 button:checked, #weather-90 button:checked, #weather-91 button:checked,
+#weather-92 button:checked, #weather-93 button:checked, #weather-94 button:checked, #weather-95 button:checked, 
+#weather-96 button:checked, #weather-97 button:checked, #weather-98 button:checked, #weather-99 button:checked,
+#xkb-1 button:active, #xkb-2 button:active, #xkb-3 button:active, #xkb-4 button:active,
+#xkb-5 button:active, #xkb-6 button:active, #xkb-7 button:active, #xkb-8 button:active,
+#xkb-9 button:active, #xkb-10 button:active, #xkb-11 button:active, #xkb-12 button:active,
+#xkb-13 button:active, #xkb-14 button:active, #xkb-15 button:active, 
+#xkb-16 button:active, #xkb-17 button:active, #xkb-18 button:active, #xkb-19 button:active,
+#xkb-20 button:active, #xkb-21 button:active, #xkb-22 button:active, #xkb-23 button:active, 
+#xkb-24 button:active, #xkb-25 button:active, #xkb-26 button:active, #xkb-27 button:active, 
+#xkb-28 button:active, #xkb-29 button:active, #xkb-30 button:active, #xkb-31 button:active, 
+#xkb-32 button:active, #xkb-33 button:active, #xkb-34 button:active, #xkb-35 button:active, 
+#xkb-36 button:active, #xkb-37 button:active, #xkb-38 button:active, #xkb-39 button:active, 
+#xkb-40 button:active, #xkb-41 button:active, #xkb-42 button:active, #xkb-43 button:active,
+#xkb-44 button:active, #xkb-45 button:active, #xkb-46 button:active, #xkb-47 button:active, 
+#xkb-48 button:active, #xkb-49 button:active, #xkb-50 button:active, #xkb-51 button:active, 
+#xkb-52 button:active, #xkb-53 button:active, #xkb-54 button:active, #xkb-55 button:active, 
+#xkb-56 button:active, #xkb-57 button:active, #xkb-58 button:active, #xkb-59 button:active, 
+#xkb-60 button:active, #xkb-61 button:active, #xkb-62 button:active, #xkb-63 button:active, 
+#xkb-64 button:active, #xkb-65 button:active, #xkb-66 button:active, #xkb-67 button:active,
+#xkb-68 button:active, #xkb-69 button:active, #xkb-70 button:active, #xkb-71 button:active, 
+#xkb-72 button:active, #xkb-73 button:active, #xkb-74 button:active, #xkb-75 button:active, 
+#xkb-76 button:active, #xkb-77 button:active, #xkb-78 button:active, #xkb-79 button:active, 
+#xkb-80 button:active, #xkb-81 button:active, #xkb-82 button:active, #xkb-83 button:active, 
+#xkb-84 button:active, #xkb-85 button:active, #xkb-86 button:active, #xkb-87 button:active, 
+#xkb-88 button:active, #xkb-89 button:active, #xkb-90 button:active, #xkb-91 button:active,
+#xkb-92 button:active, #xkb-93 button:active, #xkb-94 button:active, #xkb-95 button:active, 
+#xkb-96 button:active, #xkb-97 button:active, #xkb-98 button:active, #xkb-99 button:active {
+    border-radius: 0px;
+    border-top: 1px solid @borders;
+    border-left: 1px solid @borders;
+    border-bottom: 1px solid @light_shadow;
+    border-right: 1px solid @light_shadow;
+    box-shadow: 1px 1px @dark_shadow inset, -1px -1px @button_bg_color inset;
+    background-image: url("assets/scrollbar_trough.png");
+    color: @toolbar_fg_color;
+    background-color: @button_bg_color;
+}
 
+/* --------------Shift icon and label right -------------- */
+#xfce4-notification-plugin:checked image, #xfce4-power-manager-plugin:checked image, #actions-button:checked image, #xfce-panel-button:active image,
+#xfce4-notification-plugin:checked label, #xfce4-power-manager-plugin:checked label, #actions-button:checked label, #xfce-panel-button:active label,
+#actions-button:active image, #actions-button:active label, #actions-button:checked image, #actions-button:checked label,
+#directorymenu-button:active image, #directorymenu-button:checked image, #directorymenu-button:active label, #directorymenu-button:checked label,
+#windowmenu-button:active image, #windowmenu-button:checked image, #windowmenu-button:active label, #windowmenu-button:checked label,
+#weather-1 button:active > box, #weather-2 button:active > box, #weather-3 button:active > box, #weather-4 button:active > box,
+#weather-5 button:active > box, #weather-6 button:active > box, #weather-7 button:active > box, #weather-8 button:active > box,
+#weather-9 button:active > box, #weather-10 button:active > box, #weather-11 button:active > box, #weather-12 button:active > box,
+#weather-13 button:active > box, #weather-14 button:active > box, #weather-15 button:active > box, 
+#weather-16 button:active > box, #weather-17 button:active > box, #weather-18 button:active > box, #weather-19 button:active > box,
+#weather-20 button:active > box, #weather-21 button:active > box, #weather-22 button:active > box, #weather-23 button:active > box, 
+#weather-24 button:active > box, #weather-25 button:active > box, #weather-26 button:active > box, #weather-27 button:active > box, 
+#weather-28 button:active > box, #weather-29 button:active > box, #weather-30 button:active > box, #weather-31 button:active > box, 
+#weather-32 button:active > box, #weather-33 button:active > box, #weather-34 button:active > box, #weather-35 button:active > box, 
+#weather-36 button:active > box, #weather-37 button:active > box, #weather-38 button:active > box, #weather-39 button:active > box, 
+#weather-40 button:active > box, #weather-41 button:active > box, #weather-42 button:active > box, #weather-43 button:active > box,
+#weather-44 button:active > box, #weather-45 button:active > box, #weather-46 button:active > box, #weather-47 button:active > box, 
+#weather-48 button:active > box, #weather-49 button:active > box, #weather-50 button:active > box, #weather-51 button:active > box, 
+#weather-52 button:active > box, #weather-53 button:active > box, #weather-54 button:active > box, #weather-55 button:active > box, 
+#weather-56 button:active > box, #weather-57 button:active > box, #weather-58 button:active > box, #weather-59 button:active > box, 
+#weather-60 button:active > box, #weather-61 button:active > box, #weather-62 button:active > box, #weather-63 button:active > box, 
+#weather-64 button:active > box, #weather-65 button:active > box, #weather-66 button:active > box, #weather-67 button:active > box,
+#weather-68 button:active > box, #weather-69 button:active > box, #weather-70 button:active > box, #weather-71 button:active > box, 
+#weather-72 button:active > box, #weather-73 button:active > box, #weather-74 button:active > box, #weather-75 button:active > box, 
+#weather-76 button:active > box, #weather-77 button:active > box, #weather-78 button:active > box, #weather-79 button:active > box, 
+#weather-80 button:active > box, #weather-81 button:active > box, #weather-82 button:active > box, #weather-83 button:active > box, 
+#weather-84 button:active > box, #weather-85 button:active > box, #weather-86 button:active > box, #weather-87 button:active > box, 
+#weather-88 button:active > box, #weather-89 button:active > box, #weather-90 button:active > box, #weather-91 button:active > box,
+#weather-92 button:active > box, #weather-93 button:active > box, #weather-94 button:active > box, #weather-95 button:active > box, 
+#weather-96 button:active > box, #weather-97 button:active > box, #weather-98 button:active > box, #weather-99 button:active > box,
+#weather-1 button:checked > box, #weather-2 button:checked > box, #weather-3 button:checked > box, #weather-4 button:checked > box,
+#weather-5 button:checked > box, #weather-6 button:checked > box, #weather-7 button:checked > box, #weather-8 button:checked > box,
+#weather-9 button:checked > box, #weather-10 button:checked > box, #weather-11 button:checked > box, #weather-12 button:checked > box,
+#weather-13 button:checked > box, #weather-14 button:checked > box, #weather-15 button:checked > box, 
+#weather-16 button:checked > box, #weather-17 button:checked > box, #weather-18 button:checked > box, #weather-19 button:checked > box,
+#weather-20 button:checked > box, #weather-21 button:checked > box, #weather-22 button:checked > box, #weather-23 button:checked > box, 
+#weather-24 button:checked > box, #weather-25 button:checked > box, #weather-26 button:checked > box, #weather-27 button:checked > box, 
+#weather-28 button:checked > box, #weather-29 button:checked > box, #weather-30 button:checked > box, #weather-31 button:checked > box, 
+#weather-32 button:checked > box, #weather-33 button:checked > box, #weather-34 button:checked > box, #weather-35 button:checked > box, 
+#weather-36 button:checked > box, #weather-37 button:checked > box, #weather-38 button:checked > box, #weather-39 button:checked > box, 
+#weather-40 button:checked > box, #weather-41 button:checked > box, #weather-42 button:checked > box, #weather-43 button:checked > box,
+#weather-44 button:checked > box, #weather-45 button:checked > box, #weather-46 button:checked > box, #weather-47 button:checked > box, 
+#weather-48 button:checked > box, #weather-49 button:checked > box, #weather-50 button:checked > box, #weather-51 button:checked > box, 
+#weather-52 button:checked > box, #weather-53 button:checked > box, #weather-54 button:checked > box, #weather-55 button:checked > box, 
+#weather-56 button:checked > box, #weather-57 button:checked > box, #weather-58 button:checked > box, #weather-59 button:checked > box, 
+#weather-60 button:checked > box, #weather-61 button:checked > box, #weather-62 button:checked > box, #weather-63 button:checked > box, 
+#weather-64 button:checked > box, #weather-65 button:checked > box, #weather-66 button:checked > box, #weather-67 button:checked > box,
+#weather-68 button:checked > box, #weather-69 button:checked > box, #weather-70 button:checked > box, #weather-71 button:checked > box, 
+#weather-72 button:checked > box, #weather-73 button:checked > box, #weather-74 button:checked > box, #weather-75 button:checked > box, 
+#weather-76 button:checked > box, #weather-77 button:checked > box, #weather-78 button:checked > box, #weather-79 button:checked > box, 
+#weather-80 button:checked > box, #weather-81 button:checked > box, #weather-82 button:checked > box, #weather-83 button:checked > box, 
+#weather-84 button:checked > box, #weather-85 button:checked > box, #weather-86 button:checked > box, #weather-87 button:checked > box, 
+#weather-88 button:checked > box, #weather-89 button:checked > box, #weather-90 button:checked > box, #weather-91 button:checked > box,
+#weather-92 button:checked > box, #weather-93 button:checked > box, #weather-94 button:checked > box, #weather-95 button:checked > box, 
+#weather-96 button:checked > box, #weather-97 button:checked > box, #weather-98 button:checked > box, #weather-99 button:checked {
+    margin-left: 1px;
+    margin-right: -1px;
+}
 

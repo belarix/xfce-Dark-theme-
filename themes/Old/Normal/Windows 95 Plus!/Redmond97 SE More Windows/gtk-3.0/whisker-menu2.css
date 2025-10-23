@@ -41,6 +41,17 @@
 #whiskermenu-button box > image {
   margin: 2px; }
 
+#whiskermenu-button:checked box > image,
+#whiskermenu-button:active box > image {
+    margin-right: 1px;
+    margin-left: 3px;
+}
+
+#whiskermenu-button:checked box > label,
+#whiskermenu-button:active box > label {
+    margin-right: -1px;
+    margin-left: 1px;
+}
 
 #whiskermenu-window scrolledwindow {
   border-radius: 0px;

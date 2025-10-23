@@ -11,6 +11,14 @@
    margin: 1px;
 }
 
+#XfcePanelWindow.deskbar button box > image {
+    margin-left: -1px
+}
+
+#XfcePanelWindow.deskbar button:active box > image, #XfcePanelWindow.deskbar button:checked box > image {
+    margin-left: 0px
+}
+
 #XfcePanelWindow .horizontal button > box {
    margin-top: 1px;
    margin-right: 3px; }
@@ -59,6 +67,12 @@
    margin: 1px;
    padding: 3px; }
 
+#XfcePanelWindow #launcher-arrow:active image, #XfcePanelWindow #launcher-arrow:checked image,
+#XfcePanelWindow #launcher-arrow:active label, #XfcePanelWindow #launcher-arrow:checked label {
+    margin-left: 1px;
+    margin-right: -1px;
+}
+
 #XfcePanelWindow {
    box-shadow: 0 1px @light_shadow inset;
    border-top: @light_shadow 1px solid; }
@@ -66,82 +80,6 @@
 #XfcePanelWindow.deskbar {
    box-shadow: inset 0px 0 @dark_shadow, inset 0 0px @dark_shadow, inset 1px 0 @light_shadow, inset 0 1px @light_shadow,
    0 0px @light_shadow, 0 0px @bg_color; }
-
-#XfcePanelWindow.deskbar #clock-button,
-#XfcePanelWindow.deskbar #clock-button:hover,
-#XfcePanelWindow.deskbar #clock-button:checked {
-    margin: 2px;
-    padding-right: 2px;
-    padding-left: 2px;
-    box-shadow: none;
-    border-top: 1px solid @dark_shadow;
-    border-right: 1px solid @light_shadow;
-    border-left: 1px solid @dark_shadow;
-    border-bottom: 1px solid @light_shadow;
-    background-image: none;
-    font-weight: normal;
-}
-
-#XfcePanelWindow.deskbar #clock-button label {
-  margin: -1px;
-}
-
-#XfcePanelWindow #clock-button,
-#XfcePanelWindow #clock-button:hover,
-#XfcePanelWindow #clock-button:checked {
-   margin-left: -2px;
-   padding-right: 3px;
-   margin-top: 3px;
-   margin-bottom: 2px;
-   box-shadow: none;
-   border-top: 1px solid @dark_shadow;
-   border-right: 1px solid @light_shadow;
-   background-image: none;
-   font-weight: normal;
-   border-bottom: 1px solid @light_shadow; }
-
-#XfcePanelWindow #clock-button label {
-  margin-right: 4px;
-  margin-left: 2px;
-  margin-top: -1px;
-}
-
-#applicationmenu-button {
-   font-weight: bold;
-   padding: 4px;
-   margin-left: 4px;
-   margin-top: 2px;
-   margin-bottom: 2px;
-   color: @theme_fg_color;
-   border-top: 1px solid @button_bg_color;
-   border-left: 1px solid @button_bg_color;
-   border-right: 1px solid @borders;
-   border-bottom: 1px solid @borders; 
-   border-radius: 0px;
-   background-color: @button_bg_color;
-   box-shadow: inset -1px 0 @dark_shadow, inset 0 -1px @dark_shadow, inset 1px 0 @light_shadow, inset 0 1px @light_shadow,
-   0 -1px @light_shadow, 0 -1px @bg_color; }
-
-#applicationmenu-button:checked {
-   border: none;
-   box-shadow: none;
-   border-top: 1px solid @borders;
-   border-left: 1px solid @borders;
-   border-bottom: 1px solid @light_shadow;
-   border-right: 1px solid @light_shadow;
-   box-shadow: 1px 1px @dark_shadow inset, -1px -1px @button_bg_color inset,
-   0 -1px @light_shadow, 0 -1px @bg_color;
-   background-image: url("assets/scrollbar_trough.png");
-   color: @toolbar_fg_color;
-   background-color: @button_bg_color; }
-
-#applicationmenu-button:checked image, #applicationmenu-button:checked label {
-margin-left: 1px;
-margin-right: -1px;
-}
-
-#applicationmenu-button box {
-   padding: 3px; }
 
 XfdesktopIconView .view {
    color: #fff; 

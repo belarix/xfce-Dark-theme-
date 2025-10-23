@@ -2,7 +2,7 @@ Redmond97 SE
 
 Windows 95 OSR2 UI for Xfce4 4.20
 
-v1.76 / 2025 Sliver X
+v1.78 / 2025 Sliver X
 
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/1-ouroboros.png)
 
@@ -91,7 +91,7 @@ this is where it got a bit complicated for me. After a lot of testing, I ultimat
 Xfce4
 -----
 1) Enable HiDPI variant of theme under Appearance > Style
-2) Set mouse Cursor Size to 32 under Mouse and Touchpad > Theme
+2) Set mouse Cursor Size to 32 or 34 under Mouse and Touchpad > Theme
 3) Enable 2x Window Scaling under Appearance > Settings
 4) Add the following to /etc/environment to make it global, or to something that runs when you login for your account (Like ~/.profile):
 
@@ -209,6 +209,7 @@ https://github.com/parhelion22/xfce-theme-greymond
 Matthieu James & madmaxms | Faenza / Obsidian Icon Themes:
 
 https://github.com/shlinux/faenza-icon-theme
+
 https://github.com/madmaxms/iconpack-obsidian
 
 

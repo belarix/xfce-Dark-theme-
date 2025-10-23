@@ -43,6 +43,7 @@ button:disabled {
 
 
 button.flat {
+   margin: 1px;
    border-color: transparent;
    border-radius: 2px;
    color: @theme_fg_color;
