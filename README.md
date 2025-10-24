@@ -2,23 +2,25 @@ Redmond97 SE
 
 Windows 95 OSR2 UI for Xfce4 4.20
 
-v1.78 / 2025 Sliver X
+v1.80 / 2025 Sliver X
 
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/1-ouroboros.png)
 
 These themes are recreations of the Windows 95 (OSR 2-era, "Detroit") GUI controls for GTK2, GTK3, GTK4, Xfwm4, Metacity and Wine.
 
 It is a fork of the Redmond97 project. The main additions are GTK4 support, HiDPI themes, companion Wine color themes and an extended builder script.
+It also has much deeper integration into Xfce4 and its plugins.
 
 It does not focus on recreating a clone of the Windows 9x desktop like its parent project, rather, using its visual language with a modern desktop
 environment.
 
 Included is variant of madmaxms' Obsidian icon theme (Based on Faenza) with slight modifications to work better with the HiDPI themes.
 
-It was developed for Xfce4 v4.20: Minimal testing with Xfce4 v4.16 worked with some visual problems due to using an older GTK3 version, while Xfce4 4.18 is
-untested at this time.
+It was developed for Xfce4 v4.20: The need to set a panel border is a fairly recent feature of Xfce so it will not work on much older versions
+than this.
 
-Very old (GTK2-based) versions of Xfce should work fine, but this is also untested as of now.
+Very old (GTK2-based) versions of Xfce should work fine in theory (And the Xfwm4 themes are purely XPM-based, so will work on ancient versions of it),
+but this is untested as of now.
 
 Included Themes:
 
@@ -63,24 +65,23 @@ Qt5: qt5ct and qt5-styleplugins (Or whatever package the QT5 GTK theme resides i
 Qt6: qt6ct and qt6gtk2 need installed and GTK set under qt6ct. The QT_QPA_PLATFORMTHEME="qt5ct" variable works for it as well.
 
 
-Taskbar: A replica of the Explorer System Tray can be made by putting the Tray and Clock applets (in that order) together on the taskbar.
+Taskbar: A replica of the Windows Explorer System Tray can be made by putting the Tray and Clock applets (in that order) together on the taskbar.
        The pulseaudio-button plugin is also themed to fit between these visually. Panel icons should be set to a fixed "16x16" size to keep them
        consistent across things.
 
        Included are profiles for the excellent xfce4-panel-profiles addon that replicate a Win9x or Win7 style taskbar: They should be placed in
        either /.local/share/xfce4-panel-profiles/ or /usr/local/share/xfce4-panel-profiles/layouts/ to show up in its Backup/Restore menu.
 
-
-       If not using a profile, border size needs set to at least 1px in the panel's settings for things to look right.
+       If not using a profile, border size needs set to at least 1px in all panel's settings for things to look right.
 
 Etc: 
     1) The CSD has a standard Windows button order defined in GTK3/4's settings.ini but Xfce4's xfsettingsd overrides this. 
        A workaround would be to execute this somwhere at logon: 
 
-	gsettings set org.gnome.desktop.wm.preferences button-layout menu:minimize,maximize,close
+	    gsettings set org.gnome.desktop.wm.preferences button-layout menu:minimize,maximize,close
 
     2) If you're running nm-applet, it won't center correctly on a Deskbar system tray. You can edit /etc/xdg/autostart/nm-applet.desktop
-       to exec nm-applet --indicator to fix this.
+       to exec nm-applet --indicator instead of just nm-applet to fix this.
 
 
 [HiDPI Themes]
@@ -144,20 +145,10 @@ This initially started because I wanted a dark theme with non-flat controls and 
 Windows 95's UI glyphs are very clean and visually clear, so I developed several based on the excellent Redmond97 theme.
 
 However, GTK4 was not supported in it, and I wanted an easy way to get the themes working for Wine as well. I also got
-my first 4K monitor recently and needed to make all this scale up for it.
+my first 4K monitor recently and needed to make all this scale up for it. 
 
-GTK3 has a very nice setup in Redmond97, but due to how a lot of GTK4 programs use the CSD header bar in 2025 there isn't
-really a way to make it work that way for them, at least well, so I've made both GTK3 and GTK4 use a common chunky button
-scheme that behaves consistently across them and can accommodate things like Title+Subtitle headers without cutting off text.
-
-Their coloration also behaves like active/inactive WM titles. They have a button setup like Windows, but an Xsettings
-daemon will typically override this. 
-
-GTK2 is mostly scaled 2x on the HiDPI themes via upscaled assets and geometry hacks in the .rc files. Icons will not scale up
-if you are running an Xsettings mananger (Such as Xfce4's xfsettingsd) by default, so overrides must be set.
-
-The generator script has been extended to create .reg files for usage in Wine based on the final GTK theme output. These will also work in real Windows XP, 2000, and Win95/98/Me installations for what that's worth, too.
-Vista, 7, 8 and 10 (Before they removed access to the Classic theme) have not been tested.
+As of v1.80, it has finally reached a state where it is not just a replica of the Windows 9x Explorer Shell, but a general
+UI set that can be used with shell designs of all sorts in Xfce4.
 
 
 Known Issues
@@ -183,7 +174,8 @@ that amount, not just text.. It appears to be a conflict with using GDK_SCALE/Xf
 
 [Xfce]
 
-Due to limitations with themeing Xfce's panels, vertical panels don't look nearly as good as they should.
+The PulseAudioPlugin button on Deskbars is one pixel slightly bigger than any other button: This is a technical issue with also
+making it blend into the Win9x style system tray for horizontal panels.
 
 
 Credits

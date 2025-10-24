@@ -1,3 +1,10 @@
+v1.80
+~~~~~
+1) Fixed bug with enable_alternate_menu setting in theme presets.
+2) Removed bolding from pressed xfce-panel button fonts.
+3) Show Desktop plugin now fully matches other panel buttons.
+4) Hacks to improve Deskbar PulseAudioPlugin theming.
+
 v1.78
 ~~~~~
 1) All buttons should behave and look consistent across panels and most plugins.
