@@ -131,7 +131,7 @@ calendar:indeterminate {
 calendar.highlight {
 	background-color: @button_bg_color;
     color: @button_fg_color;
-    border-radius: 1px solid;
+    border-radius: 1px;
 }
 
 

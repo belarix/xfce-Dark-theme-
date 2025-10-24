@@ -1,3 +1,7 @@
+v1.81
+~~~~~
+1) Fixed some formatting warnings to stop xsession errors from being generated.
+
 v1.80
 ~~~~~
 1) Fixed bug with enable_alternate_menu setting in theme presets.
