@@ -147,7 +147,10 @@ margin-right: -1px;
     margin-right: 1px;
 }
 
+/* Icon/Label Shift on Active/Press */
 #docklike-plugin.horizontal .active_group image, #docklike-plugin.vertical .active_group image {
+    margin-top: 1px;
+    margin-bottom: -1px;
     margin-left: 1px;
     margin-right: -1px;
 }
@@ -189,6 +192,11 @@ margin-right: -1px;
     border-bottom: 1px solid @bg_color;
     background-image: none;
     background-color: transparent;
+}
+
+#pulseaudio-button:checked image {
+    margin-bottom: 1px;
+    margin-right: 1px;
 }
 
 /* Overlay hacks for Deskbar to compensate for class restrictions. Not Perfect! */
@@ -262,7 +270,10 @@ margin-right: -1px;
     background-repeat:no-repeat;
 }
 
+/* Icon/Label Shift on Active/Press */
 #showdesktop-button:active image, #showdesktop-button:checked image {
+    margin-top: 1px;
+    margin-bottom: -1px;
     margin-left: 1px;
     margin-right: -1px;
     -gtk-icon-transform: scale(0);
@@ -445,7 +456,7 @@ margin-right: -1px;
     background-color: @button_bg_color;
 }
 
-/* --------------Shift icon and label right -------------- */
+/* Icon/Label Shift on Active/Press */
 #xfce4-notification-plugin:checked image, #xfce4-power-manager-plugin:checked image, #actions-button:checked image, #xfce-panel-button:active image,
 #xfce4-notification-plugin:checked label, #xfce4-power-manager-plugin:checked label, #actions-button:checked label, #xfce-panel-button:active label,
 #actions-button:active image, #actions-button:active label, #actions-button:checked image, #actions-button:checked label,
@@ -501,7 +512,10 @@ margin-right: -1px;
 #weather-88 button:checked > box, #weather-89 button:checked > box, #weather-90 button:checked > box, #weather-91 button:checked > box,
 #weather-92 button:checked > box, #weather-93 button:checked > box, #weather-94 button:checked > box, #weather-95 button:checked > box, 
 #weather-96 button:checked > box, #weather-97 button:checked > box, #weather-98 button:checked > box, #weather-99 button:checked {
+    margin-top: 1px;
+    margin-bottom: -1px;
     margin-left: 1px;
     margin-right: -1px;
 }
+
 

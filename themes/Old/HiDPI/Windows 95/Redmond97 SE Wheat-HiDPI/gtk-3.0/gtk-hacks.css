@@ -5,6 +5,7 @@
 filechooser stack {
    background-color: @theme_bg_color; }
 
+
 filechooser stack box {
    background-color: @theme_bg_color; }
 
@@ -14,6 +15,13 @@ filechooser stack button box {
 .horizontal.dialog-actionbox {
    background-color: @theme_bg_color; }
 
+
+/* Fix text button pressing offset effect. 
+Filechooser buttons are giving me problems not wanting to move down on active... */
+.text-button:active label, .text-button:checked label {
+    margin-bottom: -2px;
+    margin-top: 0px;
+}
 
 /* Nemo hacks:
    Add padding below toolbar, hide separators since the 
