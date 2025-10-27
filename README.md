@@ -2,7 +2,7 @@ Redmond97 SE
 
 Windows 95 OSR2 UI for Xfce4 4.20
 
-v1.85 / 2025 Sliver X
+v1.81 / 2025 Sliver X
 
 ![Image Screenshot](https://github.com/SliverXReal/Redmond97-SE/blob/master/screenshots/1-ouroboros.png)
 
@@ -75,29 +75,13 @@ Taskbar: A replica of the Windows Explorer System Tray can be made by putting th
        If not using a profile, border size needs set to at least 1px in all panel's settings for things to look right.
 
 Etc: 
-----
-
-    1) Panels heavily depend on setting fixed icon sizes to look right. Roughly:
-
-       Panel Size   Panel Icon Size   Systray Icon Size
-       ----------   ---------------   -----------------
-       32px         16px              16px
-       48px         32px              24px
-       64px         48px              32px
-       96px         64px              48px
-
-    2) The CSD has a standard Windows button order defined in GTK3/4's settings.ini but Xfce4's xfsettingsd overrides this. 
+    1) The CSD has a standard Windows button order defined in GTK3/4's settings.ini but Xfce4's xfsettingsd overrides this. 
        A workaround would be to execute this somwhere at logon: 
 
 	    gsettings set org.gnome.desktop.wm.preferences button-layout menu:minimize,maximize,close
 
-    3) If you're running nm-applet, it won't center correctly on a Deskbar system tray. You can edit /etc/xdg/autostart/nm-applet.desktop
+    2) If you're running nm-applet, it won't center correctly on a Deskbar system tray. You can edit /etc/xdg/autostart/nm-applet.desktop
        to exec nm-applet --indicator instead of just nm-applet to fix this.
-
-    4) The themes are designed around the fonts Lucida Sans and Lucida Console, though they are not required.
-       7pt font works best for the clock applets.
-
-    5) Many plugins work fine in Deskbar mode if you disable their text, like Window Buttons, Application Menu, etc.
 
 
 [HiDPI Themes]

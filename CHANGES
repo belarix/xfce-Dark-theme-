@@ -1,14 +1,3 @@
-v1.85
-~~~~~
-1) Improved theming for Xfce4NotifyWindows.
-2) All buttons now shift icon/label on press or click like Win9x. text-boxes in filechooser dialogs still need a bit of work...
-3) Cleanups to GTK4 code and slight additions for dialogs.
-4) Better text-box handling.
-5) Improvements for flat button behavior.
-6) Deskbar button adjustments.
-7) Fixed some PNG scaling regressions in normal DPI themes.
-8) Adjustments to System Tray/System Tray Icons
-
 v1.81
 ~~~~~
 1) Fixed some formatting warnings to stop xsession errors from being generated.

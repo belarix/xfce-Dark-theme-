@@ -1,5 +1,5 @@
 #!/bin/bash
-#v1.85
+#v1.62
 #Dependencies: imagemagick7, bc, sed, grep, tee, tar
 
 if [ -z $1 ]; then printf "\nError. Pass the path to a theme config file, --systeminstall, or both.\n\n"; exit; fi
@@ -401,6 +401,13 @@ sed -i 's/@define-color active_title_color @selected_bg_color/@define-color acti
 sed -i 's/@define-color active_title_color1 @selected_bg_color/@define-color active_title_color1 #'$activetitle1'/g' gtk-base.css
 sed -i 's/@define-color active_title_text @selected_fg_color/@define-color active_title_text #'$activetitletext'/g' gtk-base.css
 
+if [ $(echo "$enable_alternate_menu" | grep -ci "true") -lt 1 ]; then
+  sed -i 's/border-left: 23px solid/border-left: '"$menu_side_width"'px solid/g' "gtk-3.0/whisker-menu.css"
+fi
+if [ $(echo "$enable_alternate_menu" | grep -ci "true") -gt 0 ]; then
+  sed -i 's/whisker-menu.css/whisker-menu2.css/g' "gtk.css"
+fi
+
 #Add WM colors to general GTK CSS sheet.
 sed -i 's/wm_active_title=#FFFFFF/wm_active_title '#$activetitle'/g' "gtk-base.css"
 sed -i 's/wm_active_title_text=#000000/wm_active_title_text '#$activetitletext'/g' "gtk-base.css"
@@ -512,15 +519,6 @@ tar -xzf base.tar.gz 2>>/dev/null
 echo "Compiling theme images..."
 compile_assets $2 2>>/dev/null
 build_theme_config
-
-# Define as Light/Dark Theme #
-#sed -i "s/dark-theme=0/dark-theme=$dark_theme/g" ./gtk-3.0/settings.ini
-#sed -i "s/dark-theme=0/dark-theme=$dark_theme/g" ./gtk-4.0/settings.ini
-
-# Disable side bar on Whisker Menu?
-if [ $(echo "$enable_alternate_menu" | grep -ci "false") -lt 1 ]; then
-sed -i '/SIDELOGO/,/SIDELOGOEND/{//!d}' ./whisker-menu.css ./gtk-3.0/whisker-menu.css
-fi
 
 theme_name="Redmond97 SE $Theme_name"
 rm -rf $THEMEDEST/"$theme_name"

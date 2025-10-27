@@ -39,18 +39,8 @@ button:disabled {
    color: @disabled_fg_color }
 
 
-button:active image, button:active label,
-button:checked image, button:checked label,
-button:checked:disabled image, button:checked:disabled label {
-    margin-top: 1px;
-    margin-bottom: -1px;
-    margin-left: 1px;
-    margin-right: -1px;
-}
-
-
-
 /* General flat buttons */
+
 
 button.flat {
    margin: 1px;
@@ -91,14 +81,6 @@ button.flat:disabled {
    box-shadow: none;
    background-color: transparent; }
 
-
-button.flat:active image, button.flat:active label,
-button.flat:checked image, button.flat:checked label {
-    margin-top: 1px;
-    margin-bottom: -1px;
-    margin-left: 1px;
-    margin-right: -1px;
-}
 
 /* Combobox button */
 
@@ -584,4 +566,3 @@ view.content-view check:hover, view.content-view check:disabled, view.content-vi
 .error button.close:active {
    color: @error_fg_color;
    background-color: alpha(@dark_shadow, 0.1); }
-
